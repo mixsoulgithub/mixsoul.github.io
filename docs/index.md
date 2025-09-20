@@ -7,3 +7,9 @@
 - 📱 响应式设计
 
 [查看我的项目](/projects)
+
+部署流程: 
+    1. python, git.
+    2. pip install mkdocs-material
+    3. 配置index.md, mkdocs.yml, ci.yml
+    4. 建立github仓库, 推送到仓库.
