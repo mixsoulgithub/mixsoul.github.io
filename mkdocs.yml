@@ -2,18 +2,92 @@ site_name: mixsoul's another world
 site_url: https://mixsoulgithub.github.io # 你的网站最终地址
 
 theme:
-  name: material # 使用material主题
+  name: material
+  palette:
+    # 浅色主题配置
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到深色模式
+      primary: indigo #teal
+      accent: deep green
+    # 深色主题备用
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: 切换到浅色模式
+      primary: indigo #teal
+      accent: green
+
+  # # 字体配置
+  # font:
+  #   text: Segoe UI Variable
+  #   code: Cascadia Code
+
+# 自定义CSS
+# extra_css:
+#   - stylesheets/extra.css
+
+# 功能配置
+# features:
+#   - navigation.tabs
+#   - navigation.sections
+#   - navigation.expand
+#   - search.highlight
+#   - search.suggest
 
 # 导航栏
 nav:
   - 首页: index.md
+  - 搭建过程: 搭建过程.md
+  - 小作文:
+    - 太阳猛烈: 小作文/太阳猛烈.md
+    - 日落钱塘: 小作文/日落钱塘.md
+    - 雨: 小作文/雨.md
+    - 雨雾钱塘: 小作文/雨雾钱塘.md
+    - 青春易逝: 小作文/青春易逝.md
+    - 风: 小作文/风.md
+  - 数学:
+    - 中国剩余定理: 数学/中国剩余定理.md
+    - 谱图理论: 数学/谱图理论.md
+# 扩展功能
+# plugins:
+#   - search
 
-# 扩展功能（可选）
-plugins:
-  - search # 启用搜索功能
-
-# 主题额外配置（让网站更好看）
+# 额外配置
 extra:
   analytics:
     provider: google
-    property: UA-XXXXXXXXX-X # 如果你有Google Analytics跟踪ID，可以填在这里
+    property: UA-XXXXXXXXX-X
+  # 网站信息
+  generator: false
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+# extra_javascript:
+#   - https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+# markdown_extensions:
+#   - pymdownx.arithmatex:
+#       generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+
+# 指定使用MathJax来渲染公式
+# extra_javascript:
+#   - https://polyfill.io/v3/polyfill.min.js?features=es6 # 为旧浏览器提供兼容性，可选但推荐
+#   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js # MathJax v3 的核心JS文件
+
+# extra_javascript:
+#   - https://unpkg.com/katex@0.16.9/dist/katex.min.js
+#   - https://unpkg.com/katex@0.16.9/dist/contrib/auto-render.min.js
+#   - javascripts/math.js  # 我们需要创建一个这个文件来初始化KaTeX
+
+# # MathJax 配置 (可选，但可以解决一些渲染问题)
+# extra_css:
+#   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.css
