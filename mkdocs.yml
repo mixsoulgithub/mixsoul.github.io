@@ -1,0 +1,19 @@
+site_name: mixsoul's another world 
+site_url: https://mixsoul.github.io # 你的网站最终地址
+
+theme:
+  name: material # 使用material主题
+
+# 导航栏
+nav:
+  - 首页: index.md
+
+# 扩展功能（可选）
+plugins:
+  - search # 启用搜索功能
+
+# 主题额外配置（让网站更好看）
+extra:
+  analytics:
+    provider: google
+    property: UA-XXXXXXXXX-X # 如果你有Google Analytics跟踪ID，可以填在这里
