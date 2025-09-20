@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main # 当你向 main 分支推送代码时触发此动作
+permissions:
+  contents: write
 jobs:
   deploy:
     runs-on: ubuntu-latest
